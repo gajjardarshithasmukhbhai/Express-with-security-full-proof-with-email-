@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>hello</title>
+  <link rel="stylesheet" type="text/css" href="/mdB/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/mdB/css/mdb.min.css">
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/bootstrap-js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/css.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-light kk fixed-top">
+<div class="navbar-collapse" >
+  <ul class="navbar-nav lead ml-auto" style="font-weight: 600;">
+    <li >
+      <a href="/" class="nav-link text-white te text-white te"><i class="fas fa-house-damage nav-link tx text-white"></i>Home</a>
+    </li>
+    <li>
+      <a href="/Shop" class="nav-link text-white te text-white te"><i class="fas fa-shopping-bag nav-link tx text-white"></i>Shop</a>
+    </li>
+    <li >
+      <a href="/Product" class="nav-link text-white te text-white te"><i class="fas fa-suitcase nav-link tx text-white"></i>Product</a>
+    </li>
+    <li>
+      <a href="/Cart" class="nav-link text-white te text-white te"><i class="fas fa-cart-plus nav-link tx text-white"></i>Cart</a>
+    </li>
+    <li>
+      <a href="/Order" class="nav-link text-white te text-white te"><i class="fab fa-first-order nav-link tx text-white"></i>Order</a>
+    </li>
+    <li>
+      <a href="/Add_Product" class="nav-link text-white te text-white te"><i class="fab fa-product-hunt nav-link tx text-white"></i>Add Product</a>
+    </li>
+    <li>
+      <a href="/Admin_Product" class="nav-link text-white te text-white te"><i class="fab fa-cloudsmith nav-link tx text-white"></i>Admin Product</a>
+    </li>
+    <li>
+      <a href="/Admin_Product" class="nav-link text-white te text-white te"><i class="fas fa-sign-out-alt nav-link tx text-white"></i>Logout</a>
+    </li>
+  </ul>
+</div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row">
+    each data in cart_data
+      <div class="col-md-4">
+          <div class="card-deck">
+              <div class="card card-cascade narrower z-depth-1" >
+                  <div class="alert alert-danger ml-sm-5  z-depth-2" style="background-color: #1197F4;width:80%;height:20%;margin-top: -4%;border:none;">
+                      <p class="bq-title text-white " style="font-size: 23px;">Quantity #{data.quantity}</p>
+                  </div>
+                  <!-- hss -->
+                  <div class="view view-cascade overlay" >
+                    <a>
+                      <div class="mask rgba-white-slight"></div>
+                    </a>
+                  </div>
+
+                  <div class="card-body card-body-cascade">
+                    <center>
+                      <h5 class="pink-text pb-2 pt-1"><i class="fas fa-car"></i>&nbsp;Products</h5>
+                      <!-- Title -->
+                      <h4 class="font-weight-bold card-title">#{data.title}</h4>
+                      <!-- Text -->
+                      <p class="card-text" style="font-size: 18px;">
+                      Product id: #{data.productId}</p>
+                      <p class="card-text" style="font-size: 18px;">
+                      Total #{data.price}&nbsp;<b>$</b></p>
+                      <form action="/Cart/#{data.productId}" method="POST">
+                          <button type="submit" class="btn btn-outline-info btn-rounded waves-effect" name="delete">Delete Product</button>
+                      </form>
+                      <br>
+                      <!-- Button --><br>
+                      <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button>
+                          <!--Twitter-->
+                      <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-twitter"></i></button>
+                      <!--Google +-->
+                      <button type="button" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button>
+                    </center>
+                  </div>
+              </div>
+              <!-- ok -->
+          </div>
+          <br>
+      </div>
+  </div>
+  <hr>
+  <center>
+    <button type="button" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><p class="card-text" style="font-size: 18px;">Total Price: #{totalPrice}&nbsp;<b>$</b></p></button>
+  </center>
+
+
+</div>
+</body>
+</html>
