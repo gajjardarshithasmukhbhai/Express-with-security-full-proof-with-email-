@@ -282,8 +282,16 @@ exports.shop_controller=(req,res,next)=>{
 				res.render("index",{wer:"your account is not verified"});
 			}
 }
-exports.home_controller=(req,res,next)=>{	
-	res.render("index",{wer:"your account is not verified"});
+exports.home_controller=(req,res,next)=>{
+	let session=req.session.loggedIn;
+	if(session)
+	{
+		res.redirect("/shop");
+	}	
+	else
+	{
+		res.render("index",{wer:"your account is not verified"});
+	}
 }
 exports.add_product_controller=(req,res,next)=>{
 	let xy=req.session.loggedIn;
