@@ -4,6 +4,14 @@
 in this webapp is fully bashed on MVC(model,view,controller base web-app) 
 architecture with sendgrid mail service :-)
 ```
+## Start Project
+```text
+start project 
+step:1
+	npm install
+step:2
+	localhost:5060
+```
 **in this web-app i learn lot**
 ---
 ```
