@@ -1,8 +1,8 @@
 # Email sending Web App in MongoDB,ExpressJS,NodeJS
 ## MVC architecture
----
 ```text
-in this webapp is fully bashed on MVC(model,view,controller base web-app) architecture with sendgrid mail service
+in this webapp is fully bashed on MVC(model,view,controller base web-app) 
+architecture with sendgrid mail service :-)
 ```
 **in this web-app i learn lot**
 ---
@@ -13,6 +13,12 @@ I give security features like
 ->CSRF protection
 ->Encrypted protection system
 ```
+## PACKAGES
+| npm package | command | application |
+| ----------- | ------- | ----------- |
+| one         | Two     | Three       |
+
+
 ### Encrypted password code
 ```javascript
 let bcrypt=require('bcryptjs');
