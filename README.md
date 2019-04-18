@@ -1,4 +1,9 @@
-# Email sending Web App in MongoDB,ExpressJS,ReactJS,NodeJS
+# Email sending Web App in MongoDB,ExpressJS,NodeJS
+## MVC architecture
+---
+```text
+in this webapp is fully bashed on MVC(model,view,controller base web-app) architecture with sendgrid mail service
+```
 **in this web-app i learn lot**
 ---
 ```
@@ -85,6 +90,6 @@ app.use(session({
 }));
 
 ```
-### checkout my Website
+### checkout my Company Website
 [comapny website](https://darshitgajjars.herokuapp.com)
 
